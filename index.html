@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Water Gun Game - Aditya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            padding: 20px 0;
+        }
+
+        #gameContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+
+        #playerSelection {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .choice {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+            cursor: pointer;
+        }
+
+        .choice img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+
+        .choice span {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #resultText {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Snake Water Gun Game</h1>
+
+    <div id="gameContainer">
+        <div id="playerSelection">
+            <h2>Make your choice:</h2>
+            <div class="choice">
+                <img src="assets/images/snake.png" alt="Snake" onclick="makeChoice('snake')">
+                <span>Snake</span>
+            </div>
+            <div class="choice">
+                <img src="assets/images/water.jpg" alt="Water" onclick="makeChoice('water')">
+                <span>Water</span>
+            </div>
+            <div class="choice">
+                <img src="assets/images/gun.jpg" alt="Gun" onclick="makeChoice('gun')">
+                <span>Gun</span>
+            </div>
+        </div>
+
+        <div id="result">
+            <h2 id="resultText"></h2>
+            <button onclick="resetGame()">Play Again</button>
+        </div>
+    </div>
+    <script src="assets/js/snake_water_gun_Game.js"></script>
+</body>
+
+</html>
